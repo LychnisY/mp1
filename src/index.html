@@ -5,10 +5,160 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MP1</title>
+        <script src="index.js"></script>
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+    <header class="site-header" id="top">
+    <nav class="nav" aria-label="Main">
+      <a class="nav__brand" href="#top">MyBrand</a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav__links">
+        <li><a class="nav__link" href="#hero">Home</a></li>
+        <li><a class="nav__link" href="#carousel">Carousel</a></li>
+        <li><a class="nav__link" href="#Gallery">Gallery</a></li>
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#video">Video</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+      </ul>
+      <span class="nav__indicator" aria-hidden="true"></span>
+    </nav>
+  </header>
+
+  <section id="hero" class="stripe stripe--hero">
+    <div class="container container--center">
+      <img class="avatar" src="./assets/baizi_icon.png" alt="Avatar" />
+      <h1 class="title-xl">BLUE ARCHIVE</h1>
+      <p class="subtitle">Youth × Weapons × Tales!</p>
+      <a class="btn" href="#Gallery">See Gallery</a>
+    </div>
+  </section>
+
+  <section class="stripe stripe--fixed-bg" aria-label="Clients">
+    <div class="container container--center">
+      <h2 class="title-lg">MOBILE GAME</h2>
+      <p class="muted">Displayed By Yostar☆</p>
+    </div>
+  </section>
+
+  <section id="carousel" class="stripe">
+    <div class="container">
+      <h2 class="title-lg">Introduction</h2>
+
+      <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Highlights">
+        <button class="carousel__control carousel__control--prev" aria-label="Previous slide">←</button>
+
+        <ul class="carousel__track">
+          <li class="carousel__slide is-current">
+            <div class="slide__content">
+              <h3>Brief Story</h3>
+              <p>The player and protagonist is a Sensei who was summoned from outside the academic city-state of Kivotos by the president of the General Student Council, an extrajudicial committee governing the culturally rich regional school districts. Following her sudden disappearance, criminal activity rises around Kivotos and the player is tasked by the remaining members of the council to resolve issues that crop up and help search for the president.</p>
+            </div>
+          </li>
+          <li class="carousel__slide">
+            <div class="slide__content">
+              <h3>Schools</h3>
+              <p>Abydos/Arius/Gehenna/Hyakkiyako/Millennium/Red Winter/Shanhaijing/SRT/Trinity/Valkyrie/Highlander/Wildhunt</p>
+            </div>
+          </li>
+          <li class="carousel__slide">
+            <div class="slide__content">
+              <h3>The Place where Story Begins</h3>
+              <p>Kivotos(学園都市)</p>
+            </div>
+          </li>
+        </ul>
+
+        <button class="carousel__control carousel__control--next" aria-label="Next slide">→</button>
+
+        <div class="carousel__dots" role="tablist" aria-label="Slide dots">
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="stripe">
+    <div class="container">
+      <h2 class="title-lg">Features</h2>
+      <div class="grid-3">
+        <article class="card">
+          <div class="icon">
+
+            <img src="./assets/arona_icon.png"></img>
+          </div>
+          <h3>Story</h3>
+          <p>Warmth, laughter, and tears—here you can experience them all.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">
+            <img src="./assets/purana.png"></img>
+          </div>
+          <h3>Character</h3>
+          <p>All students are cute, lively and considerate</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">
+            <img src="./assets/168.png"></img>
+          </div>
+          <h3>Free to play!</h3>
+          <p>All you need is a phone or a computer.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="Gallery" class="stripe">
+    <div class="container">
+      <h2 class="title-lg">Gallery</h2>
+      <div class="grid-3 Gallery">
+        <button class="tile" data-modal="item1" aria-haspopup="dialog" data-index="0">
+          <img src="./assets/wanmodianjpg.jpg" alt="Pandemonium Society" />
+          <span class="tile__zoom">＋</span>
+        </button>
+        <button class="tile" data-modal="item2" aria-haspopup="dialog" data-index="1">
+          <img src="./assets/youxibu.jpg" alt="Game Development Club" />
+          <span class="tile__zoom">＋</span>
+        </button>
+        <button class="tile" data-modal="item3" aria-haspopup="dialog" data-index="2">
+          <img src="./assets/baiguiyexing.jpg" alt="Hyakkaryouran Dispute Mediation Committee" />
+          <span class="tile__zoom">＋</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" aria-label="Close" data-close>×</button>
+      <h3 id="modal-title">Project</h3>
+      <img id="modal-img" src="./assets/pic1.png"/>
+      <p id="modal-text">Description goes here.</p>
+    </div>
+  </div>
+
+  <section id="about" class="stripe stripe--alt">
+    <div class="container container--center">
+      <h2 class="title-lg">Download</h2>
+      <p class="max-600">
+        Just search Blue Archive in App Store or Google Play. Or just click button down there right now!
+      </p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.nexon.bluearchive&pli=1">Touch Me</a>
+    </div>
+  </section>
+
+  <section id="video" class="stripe">
+    <div class="container">
+      <h2 class="title-lg">Preview Video</h2>
+      <video class="video" controls preload="metadata" width="100%" poster="./assets/after_school.jpg">
+        <source src="./assets/video.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+  </section>
     </body>
 </html>
 
